@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sázení na sportovní utkání</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <style>
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .logo a {
+            font-size: 1.8em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+        }
+        .container {
+            
+        }
+        .container-section {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .container-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .container-item:hover {
+            transform: translateY(-10px);
+        }
+        .container-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+<script>
+        function enlargeImage(img) {
+            const modal = document.createElement('div');
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            modal.style.display = 'flex';
+            modal.style.justifyContent = 'center';
+            modal.style.alignItems = 'center';
+            modal.style.zIndex = '1000';
+
+            const enlargedImg = document.createElement('img');
+            enlargedImg.src = img.src;
+            enlargedImg.style.maxWidth = '90%';
+            enlargedImg.style.maxHeight = '90%';
+            enlargedImg.style.borderRadius = '10px';
+
+            modal.appendChild(enlargedImg);
+
+            modal.onclick = function() {
+                document.body.removeChild(modal);
+            };
+
+            document.body.appendChild(modal);
+        }
+    </script>
+</head>
+<body>
+    <header class="header" style="margin-top: 0; padding-top: 20px; background-color: rgba(0, 0, 0, 0.7);">
+        <div class="container" style="display: flex; align-items: center; height: 140px;"> <nav class="nav" style="margin-left: auto;">
+                <ul>
+                    <li><a href="index.html" style="cursor: pointer;">Domů</a></li>
+                    <li><a href="sporty.html" style="cursor: pointer;">Sporty</a></li>
+                    <li><a href="live_sazeni.html" style="cursor: pointer;">Live Sázení</a></li>
+                    <li><a href="napoveda.html" style="cursor: pointer;">Nápověda</a></li>
+                    <li><a href="muj_ucet.html" style="cursor: pointer;">Můj Účet</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="logo" style="position: absolute; top: 10px; left: 10px;">
+            <img src="logo.jpg" alt="Logo" style="width: 120px; height: 120px;">
+            <a href="index.html" style="vertical-align: top; margin-left: 10px;">TreBESTotip.cz</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="container-section">
+                <div class="container-item">
+                    <img src="fer.jpg" alt="Sport 1" onclick="enlargeImage(this)" style="cursor: pointer;">
+                    <h3>Fotbal</h3>
+                    <p>Vše o fotbalu a nadcházejících utkáních.</p>
+                </div>
+                <div class="container-item">
+                    <img src="fio.jpg" alt="Sport 2" onclick="enlargeImage(this)" style="cursor: pointer;">
+                    <h3>Hokej</h3>
+                    <p>Informace o hokejových zápasech a sázkových příležitostech.</p>
+                </div>
+                <div class="container-item">
+                    <img src="sla.jpg" alt="Sport 3" onclick="enlargeImage(this)" style="cursor: pointer;">
+                    <h3>Tenis</h3>
+                    <p>Podrobnosti o tenisových turnajích a možnostech sázení.</p>
+                </div>
+            </section>
+
+            
+
+            
+        </div>
+    </main>
+
+    <footer class="footer" style="position: absolute; bottom: 0; width: 100%;">
+        <div class="container">
+            <p>&copy; 2024 SportBet.cz. Všechna práva vyhrazena.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="podminky.html">Podmínky Použití</a></li>
+                    <li><a href="zasady_ochrany.html">Zásady ochrany osobních údajů</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
