@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nejlepší tipy ve světě sportu přímo z TřeBESTovic</title>
+    <title>Sázení na sportovní utkání</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <style>
@@ -107,21 +107,21 @@
     </script>
 </head>
 <body>
-    <header class="header" style="margin-top: 0; padding-top: 20px; background-color: rgba(0, 0, 0, 0.7); display: flex; align-items: center; justify-content: space-between;">
+    <header class="header" style="padding-top: 20px; background-color: rgba(0, 0, 0, 0.7); display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 10;">
         <div class="container" style="display: flex; align-items: center; height: 140px;"> 
-            <nav class="nav" style="margin-left: auto;">
-                <ul>
-                    <li><a href="index.html" style="cursor: pointer;">Home</a></li>
-                    <li><a href="sporty.html" style="cursor: pointer;">Sporty</a></li>
-                    <li><a href="live_sazeni.html" style="cursor: pointer;">Live Sázení</a></li>
-                    <li><a href="napoveda.html" style="cursor: pointer;">Nápověda</a></li>
-                    <li><a href="muj_ucet.html" style="cursor: pointer;">Můj Účet</a></li>
+            <nav class="nav" style="margin-left: auto; font-family: 'Roboto', sans-serif; color: #FFD700; position: relative; z-index: 10;">
+                <ul style="background-color: black; padding: 10px; border-radius: 5px; list-style: none; display: flex; gap: 20px; justify-content: center; position: relative; z-index: 10;">
+                    <li style="display: inline-block;"><a href="index.html" style="cursor: pointer; color: #FFD700; text-decoration: none; z-index: 20;">Domů</a></li>
+                    <li style="display: inline-block;"><a href="sporty.html" style="cursor: pointer; color: #FFD700; text-decoration: none;">Sporty</a></li>
+                    <li><a href="live_sazeni.html" style="cursor: pointer; color: #FFD700; text-decoration: none;">Live Sázení</a></li>
+                    <li><a href="napoveda.html" style="cursor: pointer;color: #FFD700; text-decoration: none;">Nápověda</a></li>
+                    <li><a href="muj_ucet.html" style="cursor: pointer;color: #FFD700; text-decoration: none;">Můj Účet</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="logo" style="position: absolute; top: 10px; left: 10px;">
+        <div class="logo" style="position: absolute; top: 20px; left: 20px;">
             <img src="logo.jpg" alt="Logo" style="width: 120px; height: 120px;">
-            <a href="index.html" style="vertical-align: top; margin-left: 10px;">TreBESTotip.cz</a>
+            <a href="index.html" style="vertical-align: top; margin-left: 10px; color: #FFD700; text-decoration: none; font-size: 2.5em;">TreBESTotip.cz</a>
         </div>
     </header>
 
@@ -130,34 +130,24 @@
             <section class="container-section">
                 <div class="container-item">
                     <img src="fer.jpg" alt="Sport 1" onclick="enlargeImage(this)" style="cursor: pointer;">
-                    <h3>Fotbal</h3>
-                    <p>Vše o fotbalu a nadcházejících utkáních.</p>
+                    <h3>Tip1</h3>
+                    <p>Evropská liga</p>
                 </div>
                 <div class="container-item">
                     <img src="fio.jpg" alt="Sport 2" onclick="enlargeImage(this)" style="cursor: pointer;">
-                    <h3>Hokej</h3>
-                    <p>Informace o hokejových zápasech a sázkových příležitostech.</p>
+                    <h3>Tip2</h3>
+                    <p>Konferenční liga</p>
                 </div>
                 <div class="container-item">
                     <img src="sla.jpg" alt="Sport 3" onclick="enlargeImage(this)" style="cursor: pointer;">
-                    <h3>Tenis</h3>
-                    <p>Podrobnosti o tenisových turnajích a možnostech sázení.</p>
+                    <h3>Tip3</h3>
+                    <p>Evropská liga</p>
                 </div>
             </section>
         </div>
     </main>
 
-    <footer class="footer" style="position: relative; bottom: 0; width: 100%; margin-top: 20px;">
-        <div class="container">
-            <p>&copy; 2024 SportBet.cz. Všechna práva vyhrazena.</p>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="podminky.html">Podmínky Použití</a></li>
-                    <li><a href="zasady_ochrany.html">Zásady ochrany osobních údajů</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
-            </nav>
-        </div>
+    <footer class="footer" style="position: absolute; bottom: 0; width: 100%; height: 100px; background: url('footer.jpg') no-repeat center center; background-size: cover;">
     </footer>
 </body>
 </html>
